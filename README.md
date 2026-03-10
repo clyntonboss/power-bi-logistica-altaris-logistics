@@ -6,7 +6,7 @@ Este projeto apresenta um **dashboard executivo de performance logística**, des
 
 A solução foi criada para a empresa fictícia **Altaris Logistics**, proporcionando **visão estratégica e operacional consolidada**.
 
-🔎 **[Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMTdiMTFmMGQtZGZjNC00Mzk4LWI1MmQtMDQ1NzBlNTM3ZjlkIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)**  
+🔎 [Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMTdiMTFmMGQtZGZjNC00Mzk4LWI1MmQtMDQ1NzBlNTM3ZjlkIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)  
 
 ---
 
@@ -87,12 +87,34 @@ O dashboard fornece:
 
 ![Dashboard Preview](images/logistica-altaris-logistics.png)
 
+## Documentação das Medidas
+
+Para consultar a documentação das medidas deste projeto, suas fórmulas e descrições, acesse a [Documentação das Medidas](docs/medidas-documentacao.md).
+
 # 👨‍💻 Autor
 
-Projeto desenvolvido como parte de portfólio profissional de **Business Intelligence e Data Analytics**, demonstrando habilidades em:
+Projeto desenvolvido como parte do meu portfólio profissional em **Business Intelligence e Data Analytics**, destacando habilidades avançadas e aplicáveis a diversos cenários analíticos:
 
-- desenvolvimento de dashboards executivos  
-- modelagem dimensional  
-- análise de performance logística  
-- storytelling com dados  
-- Power BI e DAX
+- Desenvolvimento de **dashboards executivos e painéis estratégicos**, focados em insights acionáveis e tomada de decisão baseada em dados  
+- **Modelagem dimensional e relacional**, aplicando corretamente **cardinalidade, granularidade** e hierarquias entre tabelas para garantir consistência e integridade dos dados  
+- **Transformação de dados com Power Query e Linguagem M**, criando pipelines eficientes, automatizados e auditáveis  
+- Criação de **KPIs estratégicos e métricas customizadas em DAX**, para análise de performance e comparações confiáveis  
+- **Integração de múltiplas fontes de dados** (Excel, SQL, APIs, arquivos planos), padronizando e validando informações críticas  
+- **Data storytelling e visualizações interativas**, com cores, hierarquias, filtros e destaque de insights, para facilitar interpretação e engajamento do usuário  
+- **Análises estatísticas e preditivas**, usando Python, R, regressões, teste de hipóteses, séries temporais e técnicas de Machine Learning para identificação de tendências e padrões  
+- **Automatização e otimização de processos analíticos**, incluindo ETL, scripts e compressão de dados, garantindo performance e escalabilidade dos relatórios  
+- **Documentação detalhada de medidas, tabelas, modelos e processos**, permitindo reprodutibilidade, transparência e governança dos dados  
+- Aplicação de **boas práticas de engenharia de dados**, integrando análise, estatística, IA e visualização para soluções analíticas completas e confiáveis  
+- Domínio completo de **Power BI, DAX, Power Query, Python e R**, com foco em performance, qualidade e entrega de insights estratégicos
+
+---
+
+<div align="center">
+  
+**Portfólio de Business Intelligence & Data Analytics**  
+
+<img src="images/phoenix-information-technology-solutions.png" width="540">
+
+| [LinkedIn](https://www.linkedin.com/in/rogério-clynton-ribeiro/) | [Portfólio](https://clyntonboss.github.io/) |
+
+</div>
