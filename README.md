@@ -6,8 +6,7 @@ Este projeto apresenta um **dashboard executivo de performance logística**, des
 
 A solução foi criada para a empresa fictícia **Altaris Logistics**, proporcionando **visão estratégica e operacional consolidada**.
 
-🔎 **Acesse o dashboard interativo:**  
-[Analisar Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMTdiMTFmMGQtZGZjNC00Mzk4LWI1MmQtMDQ1NzBlNTM3ZjlkIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)
+🔎 **[Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMTdiMTFmMGQtZGZjNC00Mzk4LWI1MmQtMDQ1NzBlNTM3ZjlkIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)**  
 
 ---
 
