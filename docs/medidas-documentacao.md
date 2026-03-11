@@ -1,4 +1,4 @@
-# Documentação de Medidas - Projeto Altaris Logistics
+# Documentação das Medidas: Projeto Logistica — Altaris Logistics
 
 Este documento lista todas as medidas criadas no modelo Power BI, suas regras de negócio, dependências e retornos esperados.
 
