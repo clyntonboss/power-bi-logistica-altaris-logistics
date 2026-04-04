@@ -182,7 +182,7 @@ RETURN
     )
 ```
 
-## Medidas de Entregas
+## Medidas de Entregas | [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -437,7 +437,7 @@ RETURN
     )
 ```
 
-## Medidas de Frete
+## Medidas de Frete | [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -475,7 +475,7 @@ RETURN
     )
 ```
 
-## Medidas de Lucro
+## Medidas de Lucro | [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -518,7 +518,7 @@ RETURN
     )
 ```
 
-## Medidas de Pedidos
+## Medidas de Pedidos | [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
