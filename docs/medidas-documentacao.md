@@ -11,7 +11,7 @@ Lista de Medidas:
 
 ---
 
-## Medidas de Devoluções - [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+## Medidas de Devoluções | [Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
