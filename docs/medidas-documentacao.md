@@ -523,7 +523,7 @@ RETURN
 ```
 
 ## Medidas de Pedidos
-[← Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+[← Topo](#documentação-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -538,7 +538,7 @@ pedidos_mapa =
 --      fato_pedidos
 --
 -- Regra de negócio:
---      - Conta todas as linhas da tabela fPedidos, representando o total de pedidos.
+--      - Conta todas as linhas da tabela fato_pedidos, representando o total de pedidos.
 --
 -- Dependência:
 --      Coluna fato_pedidos (toda a tabela)
@@ -572,7 +572,7 @@ quantidade_pedidos =
 --      - Conta todas as linhas da tabela fato_pedidos, representando o total de pedidos.
 --
 -- Dependência:
---      Coluna fPedidos (toda a tabela)
+--      Coluna fato_pedidos (toda a tabela)
 --
 -- Retorno:
 --      Número inteiro representando a quantidade total de pedidos.
