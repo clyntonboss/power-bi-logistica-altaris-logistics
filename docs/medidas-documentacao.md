@@ -6,7 +6,7 @@ Este documento lista todas as medidas criadas no modelo Power BI, suas regras de
 [← Voltar ao Projeto](https://github.com/clyntonboss/power-bi-logistica-altaris-logistics)
 <br>
 
-Lista de Medidas:
+Índice de Medidas:
 - [Devoluções](#medidas-de-devolucoes)
 - [Entregas](#medidas-de-entregas)
 - [Frete](#medidas-de-frete)
