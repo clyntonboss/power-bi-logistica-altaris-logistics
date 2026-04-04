@@ -4,7 +4,7 @@ Este documento lista todas as medidas criadas no modelo Power BI, suas regras de
 
 Lista de Medidas:
 - [Devoluções](#medidas-de-devolucoes)
-- [Entregas](#medidas-de-mntregas)
+- [Entregas](#medidas-de-entregas)
 - [Frete](## Medidas de Frete)
 - [Lucro](## Medidas de Lucro)
 - [Pedidos](## Medidas de Pedidos)
