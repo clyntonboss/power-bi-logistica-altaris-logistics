@@ -1,6 +1,10 @@
 # Documentação das Medidas: Projeto Logistica — Altaris Logistics
 
 Este documento lista todas as medidas criadas no modelo Power BI, suas regras de negócio, dependências e retornos esperados.
+<br>
+
+[← Voltar ao Projeto]([link-do-readme](https://github.com/clyntonboss/power-bi-logistica-altaris-logistics))
+<br>
 
 Lista de Medidas:
 - [Devoluções](#medidas-de-devolucoes)
@@ -762,3 +766,6 @@ RETURN
         [quantidade_pedidos] = _MenorPedido, "#6A0A0A"   -- Vermelho escuro
     )
 ```
+<br>
+
+[← Voltar ao Projeto]([link-do-readme](https://github.com/clyntonboss/power-bi-logistica-altaris-logistics))
