@@ -467,4 +467,46 @@ RETURN
         0
     )
 ```
+
+## Medidas de Lucro
 <br>
+
+```DAX
+percentual_lucro = 
+
+-- Medida:
+--      percentual_lucro
+--
+-- Descrição:
+--      Calcula o percentual de lucro obtido sobre o valor do frete, considerando o custo de entrega no contexto do relatório.
+--
+-- Tabela origem:
+--      Medidas [valor_frete] e [custo_entrega]
+--
+-- Regra de negócio:
+--      - Subtrai o custo de entrega do valor do frete para obter o lucro.
+--      - Divide o lucro pelo valor do frete para calcular o percentual.
+--      - Permite avaliar a rentabilidade das operações de frete.
+--
+-- Dependência:
+--      Medidas [valor_frete] e [custo_entrega]
+--
+-- Retorno:
+--      Número decimal representando o percentual de lucro (ex: 0,25 = 25%).
+--
+-- Observação:
+--      DIVIDE é utilizado para evitar erros de divisão por zero.
+--      COALESCE garante que o resultado seja 0 quando não houver valores de frete.
+
+VAR _Resultado =
+    DIVIDE(
+        [valor_frete] - [custo_entrega],
+        [valor_frete]
+    )
+
+RETURN
+    COALESCE(
+        _Resultado,
+        0
+    )
+```
