@@ -12,7 +12,7 @@ Lista de Medidas:
 ---
 
 ## Medidas de Devoluções
-[← Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+[← Topo](#documentação-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -184,7 +184,7 @@ RETURN
 ```
 
 ## Medidas de Entregas
-[← Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+[← Topo](#documentação-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -440,7 +440,7 @@ RETURN
 ```
 
 ## Medidas de Frete
-[← Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+[← Topo](#documentação-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
@@ -479,7 +479,7 @@ RETURN
 ```
 
 ## Medidas de Lucro
-[← Topo](#documentacao-das-medidas-projeto-logistica--altaris-logistics)
+[← Topo](#documentação-das-medidas-projeto-logistica--altaris-logistics)
 <br>
 
 ```DAX
