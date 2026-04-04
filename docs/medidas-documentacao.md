@@ -429,3 +429,42 @@ RETURN
         0
     )
 ```
+
+## Medidas de Frete
+<br>
+
+```DAX
+valor_frete = 
+
+-- Medida:
+--      valor_frete
+--
+-- Descrição: Calcula o valor total de frete de todos os pedidos, considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      fato_pedidos
+--
+-- Regra de negócio:
+--      - Soma os valores da coluna valor_frete da tabela de pedidos, representando o total de frete cobrado no contexto filtrado.
+--
+-- Dependência:
+--      Coluna fato_pedidos[valor_frete]
+--
+-- Retorno:
+--      Número decimal representando o valor total de frete.
+--
+-- Observação:
+--      COALESCE é utilizado para garantir que o retorno seja 0 quando não houver valores de frete.
+
+VAR _Resultado =
+    SUM(
+        fato_pedidos[valor_frete]
+    )
+
+RETURN
+    COALESCE(
+        _Resultado,
+        0
+    )
+```
+<br>
