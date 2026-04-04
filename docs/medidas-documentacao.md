@@ -188,25 +188,25 @@ RETURN
 <br>
 
 ```DAX
-custo_entrega = 
+valor_entrega = 
 
 -- Medida:
---      custo_entrega
+--      valor_entrega
 --
 -- Descrição:
---      Calcula o custo total de entrega de todos os pedidos considerando o contexto de filtros aplicado no relatório.
+--      Calcula o valor total de entrega de todos os pedidos considerando o contexto de filtros aplicado no relatório.
 --
 -- Tabela origem:
 --      fato_pedidos
 --
 -- Regra de negócio:
---      Soma os valores da coluna custo_entrega da tabela de pedidos, representando o total de custos de entrega no contexto filtrado.
+--      Soma os valores da coluna valor_entrega da tabela de pedidos, representando o total de valors de entrega no contexto filtrado.
 --
 -- Dependência:
---      Coluna fato_pedidos[custo_entrega]
+--      Coluna fato_pedidos[valor_entrega]
 --
 -- Retorno:
---      Número decimal representando o custo total de entrega.
+--      Número decimal representando o valor total de entrega.
 --
 -- Observação:
 --      COALESCE é utilizado para evitar retorno BLANK() e garantir que o resultado seja 0 quando não houver dados.
@@ -489,18 +489,18 @@ percentual_lucro =
 --      percentual_lucro
 --
 -- Descrição:
---      Calcula o percentual de lucro obtido sobre o valor do frete, considerando o custo de entrega no contexto do relatório.
+--      Calcula o percentual de lucro obtido sobre o valor do frete, considerando o valor de entrega no contexto do relatório.
 --
 -- Tabela origem:
---      Medidas [valor_frete] e [custo_entrega]
+--      Medidas [valor_frete] e [valor_entrega]
 --
 -- Regra de negócio:
---      - Subtrai o custo de entrega do valor do frete para obter o lucro.
+--      - Subtrai o valor de entrega do valor do frete para obter o lucro.
 --      - Divide o lucro pelo valor do frete para calcular o percentual.
 --      - Permite avaliar a rentabilidade das operações de frete.
 --
 -- Dependência:
---      Medidas [valor_frete] e [custo_entrega]
+--      Medidas [valor_frete] e [valor_entrega]
 --
 -- Retorno:
 --      Número decimal representando o percentual de lucro (ex: 0,25 = 25%).
@@ -511,7 +511,7 @@ percentual_lucro =
 
 VAR _Resultado =
     DIVIDE(
-        [valor_frete] - [custo_entrega],
+        [valor_frete] - [valor_entrega],
         [valor_frete]
     )
 
