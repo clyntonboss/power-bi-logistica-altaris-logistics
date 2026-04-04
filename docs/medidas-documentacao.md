@@ -510,3 +510,243 @@ RETURN
         0
     )
 ```
+
+## Medidas de Pedidos
+<br>
+
+```DAX
+pedidos_mapa = 
+
+-- Medida:
+--      pedidos_mapa
+-- Descrição:
+--      Calcula a quantidade total de pedidos registrados na tabela fato_pedidos, considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      fato_pedidos
+--
+-- Regra de negócio:
+--      - Conta todas as linhas da tabela fPedidos, representando o total de pedidos.
+--
+-- Dependência:
+--      Coluna fato_pedidos (toda a tabela)
+--
+-- Retorno:
+--      Número inteiro representando a quantidade total de pedidos.
+
+VAR _Resultado =
+    COUNTROWS(
+        fato_pedidos
+    )
+
+RETURN
+    _Resultado
+```
+<br>
+
+```DAX
+quantidade_pedidos = 
+
+-- Medida:
+--      quantidade_pedidos
+--
+-- Descrição:
+--      Calcula a quantidade total de pedidos registrados na tabela fato_pedidos, considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      fato_pedidos
+--
+-- Regra de negócio:
+--      - Conta todas as linhas da tabela fato_pedidos, representando o total de pedidos.
+--
+-- Dependência:
+--      Coluna fPedidos (toda a tabela)
+--
+-- Retorno:
+--      Número inteiro representando a quantidade total de pedidos.
+--
+-- Observação:
+--      COALESCE é utilizado para garantir que o resultado seja 0 quando não houver linhas.
+--      COUNTROWS é utilizado para contar os registros filtrados.
+
+VAR _Resultado =
+    COUNTROWS(
+        fato_pedidos
+    )
+
+RETURN
+    COALESCE(
+        _Resultado,
+        0
+    )
+```
+<br>
+
+```DAX
+maior_menor_pedido = 
+
+-- Medida:
+--      maior_menor_pedido
+--
+-- Descrição:
+--      Retorna a quantidade de pedidos apenas para os meses com maior ou menor volume, considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      [quantidade_pedidos] (medida previamente definida)
+--      dimensao_calendario
+--
+-- Regra de negócio:
+--      - Calcula o menor e maior valor de pedidos no período selecionado.
+--      - Retorna a quantidade de pedidos apenas se for igual ao maior ou menor valor.
+--      - Para os demais meses, retorna BLANK().
+--
+-- Dependência:
+--      Medida [quantidade_pedidos]
+--      Colunas dimensao_calendario[mes_abreviado], dimensao_calendario[mes_numero]
+--
+-- Retorno:
+--      Número inteiro representando a quantidade de pedidos nos meses de maior e menor volume, ou BLANK() para os demais meses.
+--
+-- Observação:
+--      ALLSELECTED é utilizado para respeitar filtros aplicados no relatório.
+--      IF com operador || permite verificar múltiplas condições (maior ou menor).
+
+VAR _MenorPedido =
+    MINX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+VAR _MaiorPedido =
+    MAXX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+RETURN
+    IF(
+        [quantidade_pedidos] = _MaiorPedido ||
+        [quantidade_pedidos] = _MenorPedido,
+        [quantidade_pedidos]
+    )
+```
+<br>
+
+```DAX
+cores_maior_menor_pedido_dark = 
+
+-- Medida:
+--      cores_maior_menor_pedido_dark
+--
+-- Descrição:
+--      Define cores para destacar o mês com maior e menor quantidade de pedidos considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      [quantidade_pedidos] (medida previamente definida)
+--      dimensao_calendario
+--
+-- Regra de negócio:
+--      - Calcula o menor e maior valor de pedidos no período selecionado.
+--      - Aplica cores específicas para os meses com maior e menor quantidade:
+--        Verde claro para o maior valor
+--        Vermelho claro para o menor valor
+--
+-- Dependência:
+--      Medida [quantidade_pedidos]
+--      Colunas dimensao_calendario[mes_abreviado], dimensao_calendario[mes_numero]
+--
+-- Retorno:
+--      Código hexadecimal de cor (string) para uso em formatação condicional.
+--
+-- Observação:
+--      ALLSELECTED é usado para respeitar filtros aplicados no relatório
+--      SWITCH(TRUE()) permite múltiplas condições para definição de cor.
+
+VAR _MenorPedido =
+    MINX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+VAR _MaiorPedido =
+    MAXX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+RETURN
+    SWITCH(
+        TRUE(),
+        [quantidade_pedidos] = _MaiorPedido, "#94EA54",  -- Verde claro
+        [quantidade_pedidos] = _MenorPedido, "#F81414"   -- Vermelho claro
+    )
+```
+<br>
+
+```DAX
+cores_maior_menor_pedido_light = 
+
+-- Medida:
+--      cores_maior_menor_pedido_light
+--
+-- Descrição:
+--      Define cores para destacar o mês com maior e menor quantidade de pedidos considerando o contexto de filtros aplicado no relatório.
+--
+-- Tabela origem:
+--      [quantidade_pedidos] (medida previamente definida)
+--      dimensao_calendario
+--
+-- Regra de negócio:
+--      - Calcula o menor e maior valor de pedidos no período selecionado.
+--      - Aplica cores específicas para os meses com maior e menor quantidade:
+--        Verde escuro para o maior valor
+--        Vermelho escuro para o menor valor
+--
+-- Dependência:
+--      Medida [quantidade_pedidos]
+--      Colunas dimensao_calendario[mes_abreviado], dimensao_calendario[mes_numero]
+--
+-- Retorno:
+--      Código hexadecimal de cor (string) para uso em formatação condicional.
+--
+-- Observação:
+--      ALLSELECTED é usado para respeitar filtros aplicados no relatório
+--      SWITCH(TRUE()) permite múltiplas condições para definição de cor.
+
+VAR _MenorPedido =
+    MINX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+VAR _MaiorPedido =
+    MAXX(
+        ALLSELECTED(
+            dimensao_calendario[mes_abreviado],
+            dimensao_calendario[mes_numero]
+        ),
+        [quantidade_pedidos]
+    )
+
+RETURN
+    SWITCH(
+        TRUE(),
+        [quantidade_pedidos] = _MaiorPedido, "#385622",  -- Verde escuro
+        [quantidade_pedidos] = _MenorPedido, "#6A0A0A"   -- Vermelho escuro
+    )
+```
