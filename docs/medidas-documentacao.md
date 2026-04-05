@@ -7,7 +7,7 @@ Este documento lista todas as medidas criadas no modelo Power BI, suas regras de
 <br>
 
 Índice de Medidas:
-- [Devoluções](#medidas-de-devolucoes)
+- [Devoluções](#medidas-de-devoluções)
 - [Entregas](#medidas-de-entregas)
 - [Frete](#medidas-de-frete)
 - [Lucro](#medidas-de-lucro)
