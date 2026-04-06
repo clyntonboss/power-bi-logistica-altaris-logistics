@@ -1,4 +1,5 @@
-# Documentação das Medidas: Projeto Logística — Altaris Logistics
+# Documentação das Medidas
+## Projeto Logística — Altaris Logistics
 
 Este documento lista todas as medidas criadas no modelo Power BI, suas regras de negócio, dependências e retornos esperados.
 <br>
@@ -16,7 +17,7 @@ Este documento lista todas as medidas criadas no modelo Power BI, suas regras de
 ---
 
 ## 🚛 Medidas de Devoluções
-[← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
+[← Topo](#documentação-das-medidas)
 <br>
 
 ```DAX
@@ -188,7 +189,7 @@ RETURN
 ```
 
 ## 🚚 Medidas de Entregas
-[← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
+[← Topo](#documentação-das-medidas)
 <br>
 
 ```DAX
@@ -444,7 +445,7 @@ RETURN
 ```
 
 ## 🚐 Medidas de Frete
-[← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
+[← Topo](#documentação-das-medidas)
 <br>
 
 ```DAX
@@ -483,7 +484,7 @@ RETURN
 ```
 
 ## 💶 Medidas de Lucro
-[← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
+[← Topo](#documentação-das-medidas)
 <br>
 
 ```DAX
@@ -527,7 +528,7 @@ RETURN
 ```
 
 ## 📝 Medidas de Pedidos
-[← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
+[← Topo](#documentação-das-medidas)
 <br>
 
 ```DAX
