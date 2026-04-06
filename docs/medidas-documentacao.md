@@ -7,15 +7,15 @@ Este documento lista todas as medidas criadas no modelo Power BI, suas regras de
 <br>
 
 Índice de Medidas:
-- [Devoluções](#medidas-de-devoluções)
-- [Entregas](#medidas-de-entregas)
-- [Frete](#medidas-de-frete)
-- [Lucro](#medidas-de-lucro)
-- [Pedidos](#medidas-de-pedidos)
+- 🚛 [Devoluções](#-medidas-de-devoluções)
+- 🚚 [Entregas](#-medidas-de-entregas)
+- 🚐 [Frete](#-medidas-de-frete)
+- 💶 [Lucro](#-medidas-de-lucro)
+- 📝 [Pedidos](#-medidas-de-pedidos)
 
 ---
 
-## Medidas de Devoluções
+## 🚛 Medidas de Devoluções
 [← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
 <br>
 
@@ -187,7 +187,7 @@ RETURN
     )
 ```
 
-## Medidas de Entregas
+## 🚚 Medidas de Entregas
 [← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
 <br>
 
@@ -443,7 +443,7 @@ RETURN
     )
 ```
 
-## Medidas de Frete
+## 🚐 Medidas de Frete
 [← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
 <br>
 
@@ -482,7 +482,7 @@ RETURN
     )
 ```
 
-## Medidas de Lucro
+## 💶 Medidas de Lucro
 [← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
 <br>
 
@@ -526,7 +526,7 @@ RETURN
     )
 ```
 
-## Medidas de Pedidos
+## 📝 Medidas de Pedidos
 [← Topo](#documentação-das-medidas-projeto-logística--altaris-logistics)
 <br>
 
