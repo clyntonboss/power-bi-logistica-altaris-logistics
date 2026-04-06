@@ -1,97 +1,332 @@
-# 📊 Projeto Logística — Altaris Logistics
-
-## 📌 Visão Geral
-
-Este projeto apresenta um **dashboard executivo de performance logística**, desenvolvido em **Microsoft Power BI**, com foco no monitoramento de entregas, atrasos, devoluções e custos operacionais.
-
-A solução foi criada para a empresa fictícia **Altaris Logistics**, proporcionando **visão estratégica e operacional consolidada**.
-
-🔎 [Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMTdiMTFmMGQtZGZjNC00Mzk4LWI1MmQtMDQ1NzBlNTM3ZjlkIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)  
+# Projeto Logística — Altaris Logistics
+![BOSS BI Framework](https://img.shields.io/badge/Powered%20by-BOSS%20BI%20Framework-black?style=for-the-badge&logo=powerbi&logoColor=yellow)  
 
 ---
 
-# 🧠 Contexto do Problema
+Índice:
+<br>
 
-A **Altaris Logistics** buscava maior visibilidade sobre sua operação de entregas, especialmente em relação a:
-
-- desempenho logístico  
-- atrasos nas entregas  
-- custos operacionais  
-- índices de devolução  
-
-A ausência de uma visão integrada dificultava a **identificação de gargalos** e a **tomada de decisões estratégicas baseadas em dados**.
-
----
-
-# 🎯 Abordagem Estratégica
-
-Foi desenvolvido um **dashboard executivo em Power BI** estruturado em múltiplas camadas de análise:
-
-- **Capa:** indicadores de performance logística com o percentual de entregas realizadas no prazo e entregas em atraso  
-- **Visão Geral:** consolidação de métricas estratégicas como faturamento total, gasto com entregas e percentual de lucro operacional  
-
-O dashboard foi projetado para facilitar a **análise rápida e decisões estratégicas**.
-
----
-
-# 📊 Estrutura Analítica do Dashboard
-
-### Análise Temporal
-
-- Gráfico de área com evolução mensal do **total de entregas**, **entregas no prazo** e **entregas atrasadas**  
-
-### Análise Geográfica
-
-- Mapa interativo exibindo a distribuição das entregas por **estado**, com intensidade de cor indicando volume  
-
-### Análise de Devoluções
-
-- Gráfico de rosca mostrando os principais motivos de devolução:  
-  - desistência do cliente  
-  - mercadoria incorreta  
-  - erro na nota fiscal  
-
-### Indicadores Percentuais
-
-- Painel lateral destacando entregas no prazo e entregas atrasadas  
-
-### Análise por Tipo de Transporte
-
-- Gráficos de barras verticais detalhando tipos de transporte (refrigerado, resfriado e seco)  
-- Avaliação de impacto logístico por categoria para entregas no prazo e atrasadas  
+- 📊 [Visão Geral](#-visão-geral)
+- 🧠 [Contexto do Problema](#-contexto-do-problema)
+- 🎯 [Abordagem Estratégica](#-abordagem-estratégica)
+- 🧠 [Metodologia Aplicada](#-metodologia-aplicada--boss-bi-framework)
+- 🔷 [Fluxo da Metodologia](#-fluxo-do-boss-bi-framework)
+- 📌 [Detalhamento das Etapas](#-detalhamento-das-etapas)
+- 📈 [Impactos e Resultados](#-impactos-e-resultados)
+- 🧩 [Estrutura do Dashboard](#-estrutura-do-dashboard)
+- 📊 [Visualizações Analíticas](#-visualizações-analíticas)
+- 🎛 [Filtros Interativos](#-filtros-interativos)
+- 🎨 [Experiência de Navegação](#-experiência-de-navegação)
+- 🛠 [Stack Técnica](#-stack-técnica)
+- 🧱 [Modelagem de Dados](#-modelagem-de-dados)
+- 📉 [Modelo de Dados](#-modelo-de-dados)
+- 📸 [Preview do Dashboard](#-preview-do-dashboard)
+- 📄 [Documentação das Medidas](#-documentação-das-medidas)
+- 👤 [Autor](#-autor)
 
 ---
 
-# 🛠️ Tecnologias Envolvidas
+## 📊 Visão Geral
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
 
-- **Microsoft Power BI** — desenvolvimento do dashboard e storytelling de dados  
-- **DAX** — cálculo de métricas como percentual de lucro, entregas no prazo e análise de atrasos  
-- **Modelagem Dimensional** — organização das tabelas de entregas, regiões, transportes e devoluções  
-- **Microsoft Excel** — preparação e estruturação inicial dos dados  
-- **Figma** — planejamento visual e prototipação da interface do dashboard  
+Este projeto apresenta um **dashboard de performance logística**, desenvolvido em **Power BI**, para a empresa fictícia Altaris Logistics.
+
+A solução permite acompanhar indicadores estratégicos de entregas, faturamento e eficiência operacional, analisando o cumprimento de prazos, devoluções e distribuição geográfica, facilitando decisões voltadas à otimização da operação logística e melhoria do nível de serviço.
+
+🔎 **[Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiNjhkNWViMjUtNTZhNi00MzM0LTkyNGMtYjYyNDA3ODZmMjA4IiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)**  
 
 ---
 
-# 📈 Conexão com Dados | Operação | Decisão
+## 🧠 Contexto do Problema
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
 
-O dashboard fornece:
+A área operacional da **Altaris Logistics** enfrentava desafios na análise integrada de:
 
-- visão estratégica e operacional da cadeia logística  
-- monitoramento de desempenho de entregas e custos operacionais  
-- identificação de padrões de devolução  
-- suporte à **tomada de decisão rápida e assertiva**  
+- desempenho das entregas (no prazo e atrasadas)
+- faturamento e resultados operacionais
+- distribuição geográfica das entregas
+- controle e causas de devoluções
+
+Essas limitações dificultavam a identificação de padrões, gargalos operacionais e ineficiências no processo logístico, impactando diretamente a tomada de decisão estratégica e o nível de serviço prestado.
+
+---
+
+## 🎯 Abordagem Estratégica
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+Para resolver esses desafios, foi desenvolvida uma solução analítica utilizando Power BI, estruturada com modelagem dimensional e organização de indicadores estratégicos da operação logística.
+
+O dashboard foi projetado para oferecer:
+
+- leitura executiva clara
+- análise detalhada de performance das entregas
+- navegação intuitiva entre visões operacionais
+
+### KPIs principais
+
+- Faturamento
+- Quantidade de Entregas
+- Entregas do Prazo
+- Entregas em Atraso
+- Devoluções
+
+---
+
+## 🧠 Metodologia Aplicada — BOSS BI Framework
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+> Este projeto foi desenvolvido utilizando o BOSS BI Framework (Business-Oriented Smart Solutions), uma metodologia proprietária desenvolvida para estruturar projetos de Business Intelligence e Analytics, focada na geração de valor estratégico, consistência analítica e suporte à tomada de decisão.
+
+## 🔷 Fluxo do BOSS BI Framework
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+```mermaid
+flowchart LR
+    A[Business Understanding] --> B[Data Understanding]
+    B --> C[Data Preparation]
+    C --> D[Data Modeling]
+    D --> E[Analytical Exploration]
+    E --> F[Data Visualization]
+    F --> G[Insights & Decision Support]
+    G --> H[Deployment]
+    H --> I[Continuous Improvement]
+    I --> A
+```
+
+## 📌 Detalhamento das Etapas
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+### 🔹 1. Business Understanding
+Definição do problema analítico e alinhamento com os objetivos estratégicos do negócio, garantindo que a solução gere valor real e mensurável.
+
+---
+
+### 🔹 2. Data Understanding
+Mapeamento das fontes de dados e análise inicial para compreensão da estrutura, qualidade e granularidade das informações disponíveis.
+
+---
+
+### 🔹 3. Data Preparation
+Tratamento, limpeza e transformação dos dados, assegurando consistência, padronização e confiabilidade para análise.
+
+---
+
+### 🔹 4. Data Modeling
+Estruturação do modelo de dados utilizando boas práticas de modelagem dimensional, com foco em performance e escalabilidade.
+
+---
+
+### 🔹 5. Analytical Exploration
+Exploração dos dados para identificação de padrões, tendências, correlações e possíveis anomalias relevantes ao negócio.
+
+---
+
+### 🔹 6. Data Visualization
+Desenvolvimento de dashboards e relatórios interativos, aplicando princípios de visualização e Data Storytelling.
+
+---
+
+### 🔹 7. Insights & Decision Support
+Geração de insights acionáveis e recomendações estratégicas para apoiar a tomada de decisão baseada em dados.
+
+---
+
+### 🔹 8. Deployment
+Publicação e disponibilização da solução analítica, garantindo acesso, atualização e governança dos dados.
+
+---
+
+### 🔹 9. Continuous Improvement
+Monitoramento contínuo e evolução da solução, adaptando-se às mudanças e novas necessidades do negócio.
+
+---
+
+## 📈 Impactos e Resultados
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+A solução permite:
+
+- identificar padrões de desempenho e atraso nas entregas
+- analisar a distribuição geográfica da operação logística
+- compreender as principais causas de devoluções e falhas operacionais
+- comparar indicadores de SLA, faturamento e eficiência entre diferentes períodos e regiões
+
+Com isso, gestores conseguem tomar decisões mais estratégicas e orientadas por dados para aumentar a eficiência logística e melhorar o nível de serviço.
+
+---
+
+## 🧩 Estrutura do Dashboard
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+### 📊 **Indicadores Principais**
+
+O dashboard apresenta três indicadores principais:
+
+### Faturamento
+
+- valor total faturado no período analisado
+
+### Entregas
+
+- quantidade de entregas sem distinção entre no prazo e atrasada
+
+### Devoluções
+
+- quantidade de devoluções por motivo
+
+---
+
+## 📊 Visualizações Analíticas
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+### 🚚 **Desempenho das Entregas ao Longo do Tempo**
+
+Gráfico de linha apresentando:
+
+- evolução da quantidade de entregas realizadas por período
+- identificação de picos operacionais e sazonalidade
+
+---
+
+### 🗺️ **Distribuição Geográfica das Entregas**
+
+Mapa do Brasil exibindo:
+
+- volume de pedidos por estado (UF)
+- análise da concentração e abrangência da operação logística
+
+---
+
+### 📦 **Análise de Devoluções**
+
+Gráfico de rosca mostrando:
+
+- quantidade de pedidos devolvidos por motivo
+- identificação de possíveis falhas operacionais e logísticas
+
+---
+
+### 📊 **Entregas no Prazo vs Atrasadas**
+
+Gráfico de colunas comparando:
+
+- entregas realizadas dentro do prazo
+- entregas realizadas com atraso
+
+---
+
+### 📊 **Indicador de Faturamento**
+
+Cartão analítico apresentando:
+
+- valor total faturado no período
+- visão consolidada do desempenho financeiro da operação
+
+---
+
+## 🎛 Filtros Interativos
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+O dashboard permite análise dinâmica por:
+
+- **Ano**
+
+Esse filtro permite explorar diferentes cenários analíticos.
+
+---
+
+## 🎨 Experiência de Navegação
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+O dashboard inclui recursos de usabilidade e design:
+
+- 🌙 **Modo Dark (padrão)**
+- ☀️ **Modo Light (opcional)**
+- 🔎 botão **Analisar**
+- 🏠 botão **Home**
+
+Esses elementos melhoram a experiência de exploração dos dados.
+
+---
+
+## 🛠 Stack Técnica
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+- Excel
+- Power BI
+- Power Query
+- DAX (Data Analysis Expressions)
+- Modelagem Dimensional
+- Storytelling com Dados
+- Figma
+
+---
+
+## 🧱 Modelagem de Dados
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+❄️ **Snowflake Schema**
+
+Neste projeto, foi adotado o modelo Snowflake como estratégia de modelagem dimensional, priorizando a normalização controlada de dimensões para promover organização estrutural, governança de dados e reutilização de hierarquias.  
+
+A decomposição de dimensões em múltiplas tabelas reduz redundâncias, melhora a consistência dos dados e permite maior flexibilidade na manutenção e evolução do modelo, especialmente em cenários com estruturas hierárquicas complexas, como dimensões geográficas ou categóricas.
+
+Essa abordagem é especialmente útil em contextos que exigem padronização, reuso de entidades e maior controle sobre a integridade dos dados ao longo do tempo.
+
+### **Tabelas Fato**
+
+- pedidos
+
+### **Tabelas Dimensão**
+
+- calendario
+- clientes
+- estados brasileiros
+- devolucao
+- motivo devolucao
+- veiculos
+- status
+
+Com isso, a solução proporciona maior padronização e consistência estrutural dos dados, permitindo análises mais confiáveis, melhor governança das informações e maior flexibilidade para evolução do modelo analítico conforme novas necessidades do negócio.
+
+## 📉 Modelo de Dados
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
+
+![Modelo de Dados](images/modelo-dados-altaris-logistics.png)  
+
+A modelagem foi estruturada para equilibrar normalização e desempenho, sendo possível sua adaptação para um modelo estrela em cenários que priorizem performance analítica.
 
 ---
 
 # 📸 Preview do Dashboard
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
 
 ![Dashboard Preview](images/logistica-altaris-logistics.png)
 
-## Documentação das Medidas
+## 📄 Documentação das Medidas
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
 
-Para consultar a documentação das medidas deste projeto, suas fórmulas e descrições, acesse a [Documentação das Medidas](docs/medidas-documentacao.md).
+Para consultar a documentação das medidas deste projeto, suas fórmulas e descrições, acesse a **[Documentação das Medidas](docs/medidas-documentacao.md)**.
 
-# 👨‍💻 Autor
+## 👤 Autor
+[← Topo](#projeto-logística--altaris-logistics)
+<br>
 
 Projeto desenvolvido como parte do meu portfólio profissional em **Business Intelligence e Data Analytics**, destacando habilidades avançadas e aplicáveis a diversos cenários analíticos:
 
@@ -113,8 +348,12 @@ Projeto desenvolvido como parte do meu portfólio profissional em **Business Int
   
 **Portfólio de Business Intelligence & Data Analytics**  
 
-<img src="images/phoenix-information-technology-solutions.png" width="540">
+<img src="images/assinatura.png" width="400">  
 
-| [LinkedIn](https://www.linkedin.com/in/rogério-clynton-ribeiro/) | [Portfólio](https://clyntonboss.github.io/) |
+---
+
+💼 Aberto a oportunidades em Business Intelligence & Data Analytics
+
+| [LinkedIn](https://www.linkedin.com/in/rogério-clynton-ribeiro/) | [Portfólio](https://clyntonboss.github.io/) | [e-Mail](mailto:clyntonribeiror@gmail.com) | [WhatsApp](https://wa.me/5524999240768) |
 
 </div>
