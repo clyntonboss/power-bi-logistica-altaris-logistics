@@ -34,7 +34,7 @@ Este projeto apresenta um **dashboard de performance logística**, desenvolvido 
 
 A solução permite acompanhar indicadores estratégicos de entregas, faturamento e eficiência operacional, analisando o cumprimento de prazos, devoluções e distribuição geográfica, facilitando decisões voltadas à otimização da operação logística e melhoria do nível de serviço.
 
-🔎 **[Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiNjhkNWViMjUtNTZhNi00MzM0LTkyNGMtYjYyNDA3ODZmMjA4IiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)**  
+🔎 **[Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiM2JmZDM2NzktYTJiMy00NWI3LWE4YjQtODAyNjhlNmFkZDVlIiwidCI6IjIzY2FjN2VlLWYxZDgtNDMzOS1hYTdiLTc4MWFhOWY5MjI1YiJ9)**  
 
 ---
 
